@@ -1,5 +1,9 @@
 # glob-contents
 
+[![Build Status](https://travis-ci.org/gsantiago/glob-contents.svg?branch=master)](https://travis-ci.org/gsantiago/glob-contents)
+[![npm version](https://badge.fury.io/js/glob-contents.svg)](http://badge.fury.io/js/glob-contents)
+[![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
+
 Just like [Glob](https://github.com/isaacs/node-glob), but with files contents.
 
 ```js
