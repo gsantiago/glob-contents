@@ -1,0 +1,29 @@
+{
+  "name": "glob-contents",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gsantiago/glob-contents"
+  },
+  "keywords": [
+    "glob",
+    "contents",
+    "read",
+    "promise",
+    "fs",
+    "async"
+  ],
+  "author": "Guilherme Santiago",
+  "license": "MIT",
+  "scripts": {
+    "test": "standard index.js && mocha"
+  },
+  "dependencies": {
+    "fs-promise": "^0.5.0",
+    "glob-promise": "^1.0.6"
+  },
+  "devDependencies": {
+    "mocha": "^3.0.2",
+    "standard": "^8.1.0"
+  }
+}
