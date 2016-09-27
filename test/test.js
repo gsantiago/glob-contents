@@ -12,4 +12,12 @@ describe('glob-contents', function () {
         done()
       })
   })
+
+  it('should return an empty object', function () {
+    glob('fixtures/**/*.none', {cwd: __dirname})
+      .then(function (files) {
+        assert.deepStrictEqual(files, {})
+        done()
+      })
+  })
 })
