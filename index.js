@@ -1,5 +1,5 @@
 var glob = require('glob-promise')
-var fs = require('fs-promise')
+var fs = require('fs')
 var join = require('path').join
 
 module.exports = function globContents () {
@@ -14,7 +14,12 @@ module.exports = function globContents () {
       var obj = {}
 
       var promises = files.map(function (file) {
-        return fs.readFile(join(cwd, file), 'utf8')
+        return new Promise(function (resolve, reject) {
+          fs.readFile(join(cwd, file), 'utf8', function (err, contents) {
+            if (err) return reject(err)
+            resolve(contents)
+          })
+        })
       })
 
       return Promise.all(promises).then(function (contents) {
